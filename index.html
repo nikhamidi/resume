@@ -10,24 +10,25 @@
         body {
             font-family: 'Arial', sans-serif;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.5;
+            margin: 0;
             padding: 20px;
             background-color: #f8f9fa;
         }
         .resume-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             background-color: white;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            position: relative;
         }
         .section-title {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
             padding-bottom: 5px;
             margin-bottom: 15px;
+            font-size: 1.2em;
         }
         .job-position {
             font-weight: bold;
@@ -43,32 +44,46 @@
             margin-bottom: 10px;
         }
         .download-btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #e74c3c;
             color: white;
             border: none;
             border-radius: 4px;
             font-size: 1em;
             cursor: pointer;
-            margin-bottom: 20px;
             transition: background-color 0.3s;
-            position: sticky;
-            top: 10px;
-            z-index: 100;
+            z-index: 1000;
         }
         .download-btn:hover {
-            background-color: #0056b3;
+            background-color: #c0392b;
+        }
+        .two-column {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
-        <a href="HAMIDI_BACKEND_DEVELOPER.pdf" class="download-btn" download>Download Resume as PDF</a>
-        
         <header class="mb-4">
-            <h1 class="display-4">NIK HAMIDI</h1>
+            <h1 class="display-3">NIK HAMIDI</h1>
             <h2 class="h5">SOFTWARE ENGINEER</h2>
             <p class="mb-0">
                 <i class="bi bi-linkedin"></i> <a href="https://linkedin.com/in/hamidihamat" target="_blank">linkedin.com/in/hamidihamat</a> | 
@@ -78,7 +93,9 @@
             <p>Kuala Lumpur</p>
         </header>
 
-        <section id="education">
+        <a href="HAMIDI_BACKEND_DEVELOPER.pdf" class="download-btn" download>Download Resume as PDF</a>
+
+        <section id="education" class="mb-4">
             <h3 class="section-title">EDUCATION</h3>
             <div class="mb-3">
                 <h4 class="h6">International Islamic University Malaysia</h4>
@@ -87,15 +104,15 @@
             </div>
         </section>
 
-        <section id="technical-skills" class="mt-4">
+        <section id="technical-skills" class="mb-4">
             <h3 class="section-title">TECHNICAL SKILLS</h3>
-            <div class="row">
-                <div class="col-md-6">
+            <div class="two-column">
+                <div class="column">
                     <p><strong>Programming Languages:</strong> Python, JavaScript, Dart, SQL</p>
                     <p><strong>Frameworks:</strong> Django, Flutter, FastAPI, Node.js</p>
                     <p><strong>Databases:</strong> MySQL, MongoDB, Firebase</p>
                 </div>
-                <div class="col-md-6">
+                <div class="column">
                     <p><strong>Tools:</strong> Docker, Git, GitHub, Postman</p>
                     <p><strong>Cloud:</strong> Azure, Azure AI Search, MongoDB Atlas</p>
                     <p><strong>Other:</strong> RESTful APIs, JWT Authentication, OOP, TDD</p>
@@ -103,9 +120,10 @@
             </div>
         </section>
 
-        <section id="professional-experience" class="mt-4">
+        <section id="professional-experience" class="mb-4">
             <h3 class="section-title">PROFESSIONAL EXPERIENCE</h3>
-             <div class="mb-4">
+            
+            <div class="experience-item">
                 <p class="job-position">Backend Engineer</p>
                 <p class="job-company">Avanade / Oxydata Software, Kuala Lumpur</p>
                 <p class="job-dates">Nov 2024 - May 2025</p>
@@ -120,7 +138,8 @@
                     <li>Customized API responses to align with specific insurance workflow needs</li>
                 </ul>
             </div>
-            <div class="mb-4">
+
+            <div class="experience-item">
                 <p class="job-position">Backend Engineer</p>
                 <p class="job-company">Lemonsky Animation Studio, Petaling Jaya</p>
                 <p class="job-dates">Aug 2023 - July 2024</p>
@@ -133,7 +152,7 @@
                 </ul>
             </div>
 
-            <div class="mb-4">
+            <div class="experience-item">
                 <p class="job-position">Junior Backend Engineer</p>
                 <p class="job-company">Tigerlab, Petaling Jaya</p>
                 <p class="job-dates">May 2022 - July 2023</p>
@@ -145,7 +164,7 @@
                 </ul>
             </div>
 
-            <div class="mb-4">
+            <div class="experience-item">
                 <p class="job-position">Software Developer</p>
                 <p class="job-company">Aisara, Kuala Lumpur</p>
                 <p class="job-dates">Feb 2021 - Apr 2022</p>
@@ -158,10 +177,10 @@
             </div>
         </section>
 
-        <section id="projects" class="mt-4">
+        <section id="projects" class="mb-4">
             <h3 class="section-title">PROJECTS</h3>
             
-            <div class="mb-3">
+            <div class="experience-item">
                 <p class="job-position">RAG Customer Service CMS</p>
                 <p class="job-company">Avanade, Kuala Lumpur</p>
                 <p class="job-dates">Nov 2024 - Present</p>
@@ -172,7 +191,7 @@
                 </ul>
             </div>
 
-            <div class="mb-3">
+            <div class="experience-item">
                 <p class="job-position">Animation Pipeline Software</p>
                 <p class="job-company">Lemon Sky, Shah Alam</p>
                 <p class="job-dates">Aug 2023 - July 2024</p>
@@ -183,7 +202,7 @@
                 </ul>
             </div>
 
-            <div class="mb-3">
+            <div class="experience-item">
                 <p class="job-position">Insurtech Automation</p>
                 <p class="job-company">Tigerlab, Petaling Jaya</p>
                 <p class="job-dates">May 2022 - July 2023</p>
@@ -194,7 +213,7 @@
                 </ul>
             </div>
 
-            <div class="mb-3">
+            <div class="experience-item">
                 <p class="job-position">Stock Market Prediction Web App</p>
                 <p class="job-company">Aisara, Kuala Lumpur</p>
                 <p class="job-dates">Feb 2021 - Apr 2022</p>
@@ -205,24 +224,9 @@
                 </ul>
             </div>
         </section>
-
-        <section id="awards-certifications" class="mt-4">
-            <h3 class="section-title">AWARDS & CERTIFICATIONS</h3>
-            <ul>
-                <li>Certified in Applied Machine Learning & Artificial Intelligence</li>
-                <li>Microsoft Certified: Azure AI Fundamentals (AI-900)</li>
-                <li>7 Hackathon/Competition Wins</li>
-            </ul>
-        </section>
-
-        <section id="activities" class="mt-4 mb-4">
-            <h3 class="section-title">ACTIVITIES</h3>
-            <ul>
-                <li>Active contributor to open-source projects on GitHub</li>
-                <li>Mentor for junior developers at local coding bootcamps</li>
-                <li>Speaker at Python and Django meetups</li>
-            </ul>
-        </section>
+        <footer>
+            <p>© Nik Hamidi. Anyone can reserved this.</p>
+        </footer>
     </div>
 
     <!-- Bootstrap JS -->
